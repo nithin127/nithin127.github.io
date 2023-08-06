@@ -29,6 +29,16 @@
           x2.style.display = "none";
           x3.style.display = "block";
         }
+
+        function mail() {
+          var x = document.getElementById("mail");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          } 
+        }
+
     </script>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
@@ -50,6 +60,9 @@
             color: #f09228;
             text-decoration: none;
             }
+            button {
+                font-size: 15px;
+            }
             body,
             td,
             th {
@@ -62,7 +75,7 @@
             }
             heading {
             font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 15px;
+            font-size: 18px;
             font-weight: 700
             }
         </style>
@@ -81,14 +94,24 @@
                                     <p align="center">
                                         <font size="6">Nithin Vasishta</font>
                                     </p>
-                                    <p>I work as a project scientist at <a href="https://www.stochlab.com/">IISc Bangalore</a> on legged robots. In my previous life, I tried to become a monk at Isha Foundation, jumped into the rabbit hole of spirituality, yoga, and the subconscious. Before that I did my B.Tech from <a href="https://www.iitb.ac.in/">IIT Bombay</a> in mechanical engineering and masters in AI from
-                                    <a href="https://mila.quebec/en/">Mila, Montreal</a> (and <a href="https://montrealrobotics.ca/">REAL</a>).
+                                    <p>
+                                        <font size="3">
+                                        I work as a project scientist at <a href="https://www.stochlab.com/">IISc Bangalore</a> on legged robots. In my previous life, I tried to become a monk at Isha Foundation, jumped into the rabbit hole of spirituality, yoga, and the subconscious. Before that I did my B.Tech from <a href="https://www.iitb.ac.in/">IIT Bombay</a> in mechanical engineering and masters in AI from
+                                        <a href="https://mila.quebec/en/">Mila, Montreal</a> 
+                                        <!-- (and <a href="https://montrealrobotics.ca/">REAL</a>). -->
+                                        </font>
                                     </p>
 
                                     <p align="center">
-                                        <button onclick="cv()">CV</button>
-                                        <button onclick="mail()">Email</button>
+                                        <a href="assets/pdf/cv.pdf" target="_blank">CV</a> | 
+                                        <a onclick="mail()">Email</a>
                                     </p>
+
+                                    <div align="center" id="mail" style="display:none">
+                                        <img src="assets/images/mail.png">
+                                    </div>
+                                    
+
                                 </td>
                                 </td>
                             </tr>
@@ -100,12 +123,18 @@
                     <br>
 
                     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <center><button onclick="tech()">Tech</button> <button onclick="mind()">Spirituality/Psychology</button> <button onclick="thoughts()">Thoughts</button></center>
+                        <center>
+                            <button onclick="tech()">Tech</button> &nbsp 
+                            <button onclick="mind()">Spirituality/Psychology</button> &nbsp
+                            <button onclick="thoughts()">Thoughts</button>
+                        </center>
                     </table>
 
-        
+        <br>
+        <br>
+        <br>
 
-        <table id="tech" style="display:none" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table id="tech" style="display:block" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tbody>
                 <tr>
                     <td>
