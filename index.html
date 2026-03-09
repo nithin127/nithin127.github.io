@@ -1,176 +1,599 @@
-<!-- This entire thing is taken from https://bhairavmehta95.github.io/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nithin Vasishta — Robotics & AI Researcher</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:         #faf8f3;
+    --bg2:        #f4f1ea;
+    --bg3:        #ede8de;
+    --white:      #ffffff;
+    --border:     #e2ddd4;
+    --border2:    #cec8bc;
+    --accent:     #b86e2a;
+    --accent2:    #8a4f18;
+    --text:       #1a1208;
+    --text-mid:   #4a3f2f;
+    --text-dim:   #8a7a60;
+    --text-faint: #b8a890;
+  }
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-    <script>
-        function tech() {
-          var x1 = document.getElementById("tech");
-          var x2 = document.getElementById("mind");
-          var x3 = document.getElementById("thoughts");
-          x1.style.display = "block";
-          x2.style.display = "none";
-          x3.style.display = "none";
-        }
-        
-        function mind() {
-          var x1 = document.getElementById("tech");
-          var x2 = document.getElementById("mind");
-          var x3 = document.getElementById("thoughts");
-          x1.style.display = "none";
-          x2.style.display = "block";
-          x3.style.display = "none";
-        }
-        
-        function thoughts() {
-          var x1 = document.getElementById("tech");
-          var x2 = document.getElementById("mind");
-          var x3 = document.getElementById("thoughts");
-          x1.style.display = "none";
-          x2.style.display = "none";
-          x3.style.display = "block";
-        }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-        function mail() {
-          var x = document.getElementById("mail");
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          } 
-        }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.25rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: background 0.3s, border-color 0.3s;
+    border-bottom: 1px solid transparent;
+  }
+  nav.scrolled { background: rgba(250,248,243,0.93); border-color: var(--border); backdrop-filter: blur(12px); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
 
-    </script>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-        <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-        <meta name="keywords" content="Nithin, Vasishta, Science, Spirituality, Robotics, Artificial, Intelligence, 
-                                       Deep, Learning, Mind, Body, Psychology, Subconscious, Karma, Patterns">
-        <meta name="description" content="About Nithin Vasishta">
-        <meta name="author" content="Nithin Vasishta">
-        <meta name="robots" content="index">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style type="text/css">
-            /* Stolen from Jon Barron via Bhairav via Aayush */
-            a {
-            color: #1772d0;
-            text-decoration: none;
-            }
-            a:focus,
-            a:hover {
-            color: #f09228;
-            text-decoration: none;
-            }
-            button {
-                font-size: 15px;
-            }
-            body,
-            td,
-            th {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px
-            }
-            strong {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 13px
-            }
-            heading {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 18px;
-            font-weight: 700
-            }
-        </style>
-        <title>Nithin Vasishta</title>
-    </head>
-    <body>
-        <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
-        <tbody>
-            <tr>
-                <td>
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td width="33%" valign="top"><img width="200" src="assets/images/me.png">
-                                <td width="67%" valign="middle">
-                                    <p align="center">
-                                        <font size="6">Nithin Vasishta</font>
-                                    </p>
-                                    <p>
-                                        <font size="3">
-                                        I work as a project scientist at <a href="https://www.stochlab.com/">IISc Bangalore</a> on legged robots. In my previous life, I tried to become a monk at Isha Foundation, jumped into the rabbit hole of spirituality, yoga, and the subconscious. Before that I did my B.Tech from <a href="https://www.iitb.ac.in/">IIT Bombay</a> in mechanical engineering and masters in AI from
-                                        <a href="https://mila.quebec/en/">Mila, Montreal</a> 
-                                        <!-- (and <a href="https://montrealrobotics.ca/">REAL</a>). -->
-                                        </font>
-                                    </p>
+  /* HERO — single column, full width feel */
+  .hero {
+    min-height: 100vh;
+    padding: 6rem 4rem;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: 'ROBOTICS';
+    position: absolute; bottom: -3rem; right: -3rem;
+    font-family: 'Playfair Display', serif; font-size: 22vw; font-weight: 700;
+    color: rgba(184,110,42,0.04); pointer-events: none; line-height: 1; white-space: nowrap; z-index: 0;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 1100px; display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: center; }
+  .hero-left { display: flex; flex-direction: column; }
+  .hero-right { display: flex; flex-direction: column; }
 
-                                    <p align="center">
-                                        <a href="assets/pdf/cv.pdf" target="_blank">CV</a> | 
-                                        <a onclick="mail()">Email</a>
-                                    </p>
+  .hero-eyebrow {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--accent); }
 
-                                    <div align="center" id="mail" style="display:none">
-                                        <img src="assets/images/mail.png">
-                                    </div>
-                                    
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(5rem, 9vw, 9rem);
+    line-height: 0.95; letter-spacing: -0.03em; color: var(--text);
+    margin-bottom: 0;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
 
-                                </td>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+  .hero-desc {
+    font-size: 1.05rem; color: var(--text-mid); line-height: 1.85;
+    max-width: 60ch; margin-bottom: 1.25rem; font-weight: 300;
+  }
+  .hero-desc strong { color: var(--text); font-weight: 500; }
 
-                    <br>
-                    <br>
-                    <br>
+  .hero-institutions {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1.75rem; flex-wrap: wrap;
+  }
+  .hero-inst { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--text-faint); text-transform: uppercase; }
+  .hero-sep { width: 3px; height: 3px; border-radius: 50%; background: var(--border2); flex-shrink: 0; }
 
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <center>
-                            <button onclick="tech()">Tech</button> &nbsp 
-                            <button onclick="mind()">Spirituality/Psychology</button> &nbsp
-                            <button onclick="thoughts()">Thoughts</button>
-                        </center>
-                    </table>
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-        <br>
-        <br>
-        <br>
+  /* BUTTONS */
+  .btn { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.85rem 1.75rem; text-decoration: none; display: inline-block; transition: all 0.2s; }
+  .btn-primary { background: var(--accent); color: white; font-weight: 500; }
+  .btn-primary:hover { background: var(--accent2); transform: translateY(-1px); }
+  .btn-outline { border: 1px solid var(--border2); color: var(--text-dim); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-        <table id="tech" style="display:block" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-                <tr>
-                    <td>
-                        <heading>Tech Projects</heading>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+  /* SECTIONS */
+  section { padding: 6rem 4rem; position: relative; }
+  .section-head { display: flex; align-items: baseline; gap: 1.25rem; margin-bottom: 3.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  .section-num { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
+  h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; letter-spacing: -0.02em; }
 
-        <table id="mind" style="display:none" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-                <tr>
-                    <td>
-                        <heading>Mind and Spirituality</heading>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <table id="thoughts" style="display:none" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-                <tr>
-                    <td>
-                        <heading>Musings</heading>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </td>
-</tr>
-</tbody>
-</table>
+  /* ABOUT */
+  .about { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .about-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 5rem; align-items: start; }
+  .about-body p { font-size: 1rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.25rem; font-weight: 300; }
+  .about-body p:last-child { margin-bottom: 0; }
+  .about-body p strong { color: var(--text); font-weight: 500; }
+  .skills-panel { display: flex; flex-direction: column; gap: 2rem; }
+  .skill-group-title { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; padding: 0.3rem 0.7rem; border: 1px solid var(--border); color: var(--text-dim); background: var(--bg); letter-spacing: 0.04em; transition: border-color 0.2s, color 0.2s; cursor: default; }
+  .tag:hover { border-color: var(--accent); color: var(--accent); }
 
-    <div style="position: absolute; bottom: 5px">
-        <a href='https://bhairavmehta95.github.io/'>Website source code</a>
+  /* EXPERIENCE */
+  .exp-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .exp-item { background: var(--bg); display: grid; grid-template-columns: 220px 1fr; gap: 2.5rem; padding: 2.25rem; transition: background 0.2s; }
+  .exp-item:hover { background: var(--white); }
+  .exp-period { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem; text-transform: uppercase; }
+  .exp-org { font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
+  .exp-role { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 0.3rem; letter-spacing: -0.01em; }
+  .exp-loc { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: var(--text-faint); letter-spacing: 0.08em; margin-bottom: 1rem; text-transform: uppercase; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .exp-bullets li { font-size: 0.88rem; color: var(--text-mid); padding-left: 1.1rem; position: relative; line-height: 1.65; }
+  .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; }
+
+  /* PROJECTS */
+  .projects { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .project-full { margin-bottom: 5rem; padding-bottom: 5rem; border-bottom: 1px solid var(--border); }
+  .project-full:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .project-full .pf-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+  .project-full:nth-child(even) .pf-inner { direction: rtl; }
+  .project-full:nth-child(even) .pf-inner > * { direction: ltr; }
+  .project-full.wide .pf-inner { grid-template-columns: 1fr; }
+  .project-full.wide .pf-media { aspect-ratio: 21/9; }
+
+  .pf-media { width: 100%; aspect-ratio: 16/9; background: var(--bg3); border: 1px solid var(--border); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+  .pf-media img, .pf-media video, .pf-media iframe { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pf-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; width: 100%; height: 100%; color: var(--text-faint); text-align: center; padding: 2rem; }
+  .pf-media:has(video) .pf-ph, .pf-media:has(img) .pf-ph { display: none; }
+  .pf-ph-icon { font-size: 2.5rem; opacity: 0.3; }
+  .pf-ph-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.45; max-width: 22ch; line-height: 1.6; }
+
+  .pf-media-grid { display: grid; gap: 0.75rem; }
+  .pf-media-grid.two { grid-template-columns: 1fr 1fr; }
+  .pf-media-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+  .pf-media-grid .pf-media { aspect-ratio: 4/3; }
+
+  .pf-body { display: flex; flex-direction: column; gap: 1.25rem; padding-top: 0.5rem; }
+  .pf-cat { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  .pf-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; color: var(--text); }
+  .pf-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.8; font-weight: 300; }
+  .pf-highlights { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+  .pf-highlights li { font-size: 0.85rem; color: var(--text-mid); padding-left: 1.1rem; position: relative; line-height: 1.6; }
+  .pf-highlights li::before { content: '—'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; }
+  .pf-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+  .ptag { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; padding: 0.25rem 0.6rem; border: 1px solid var(--border2); color: var(--text-faint); letter-spacing: 0.05em; }
+
+  /* EDUCATION */
+  .edu-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 2rem; }
+  .edu-card { background: var(--bg); padding: 2rem; transition: background 0.2s; }
+  .edu-card:hover { background: var(--white); }
+  .edu-year { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  .edu-degree { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 400; margin-bottom: 0.4rem; line-height: 1.3; }
+  .edu-inst { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 0.75rem; line-height: 1.5; }
+  .edu-gpa { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-faint); letter-spacing: 0.08em; }
+
+  .ach-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .ach-item { background: var(--white); padding: 1.5rem; text-align: center; transition: background 0.2s; }
+  .ach-item:hover { background: var(--bg2); }
+  .ach-rank { font-family: 'Playfair Display', serif; font-size: 2.25rem; font-style: italic; color: var(--accent); line-height: 1; margin-bottom: 0.35rem; }
+  .ach-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: var(--text-faint); letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.4; }
+
+  /* CONTACT */
+  .contact { background: var(--text); color: var(--bg); }
+  .contact .section-head { border-color: rgba(255,255,255,0.1); }
+  .contact .section-num { color: #c17d3c; }
+  .contact h2 { color: var(--bg); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .contact-left p { font-size: 1rem; color: rgba(250,248,243,0.55); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+  .contact-links { display: flex; flex-direction: column; gap: 1px; }
+  .contact-link { display: flex; align-items: center; gap: 1.5rem; padding: 1rem 1.25rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); text-decoration: none; color: rgba(250,248,243,0.6); font-size: 0.85rem; transition: all 0.2s; }
+  .contact-link:hover { background: rgba(255,255,255,0.08); color: var(--bg); border-color: rgba(255,255,255,0.12); }
+  .cl-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: #c17d3c; min-width: 70px; }
+
+  /* CONTACT FORM */
+  #contact-form { display: flex; flex-direction: column; gap: 0.75rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  #contact-form input, #contact-form textarea { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(250,248,243,0.85); font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 300; padding: 0.85rem 1rem; width: 100%; outline: none; transition: border-color 0.2s; resize: vertical; }
+  #contact-form input::placeholder, #contact-form textarea::placeholder { color: rgba(250,248,243,0.25); }
+  #contact-form input:focus, #contact-form textarea:focus { border-color: rgba(193,125,60,0.6); }
+  .btn-light { background: rgba(250,248,243,0.1); color: var(--bg); border: 1px solid rgba(250,248,243,0.2); font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.85rem 1.75rem; cursor: pointer; transition: background 0.2s; }
+  .btn-light:hover { background: rgba(250,248,243,0.15); }
+
+  /* FOOTER */
+  footer { padding: 1.75rem 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); background: var(--bg2); }
+  footer p { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--text-faint); letter-spacing: 0.08em; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .au { opacity: 0; animation: fadeUp 0.65s ease forwards; }
+  .au-1 { animation-delay: 0.1s; } .au-2 { animation-delay: 0.22s; } .au-3 { animation-delay: 0.34s; } .au-4 { animation-delay: 0.46s; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 960px) {
+    nav { padding: 1.25rem 1.5rem; } .nav-links { display: none; }
+    .hero { padding: 7rem 1.5rem 4rem; } .hero::after { display: none; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .project-full .pf-inner { grid-template-columns: 1fr; }
+    .project-full:nth-child(even) .pf-inner { direction: ltr; }
+    .pf-media-grid.two, .pf-media-grid.three { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .ach-strip { grid-template-columns: repeat(2,1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="nav-logo">Nithin Vasishta</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow au au-1">Robotics · AI · Control Systems</div>
+      <h1 class="au au-2">Nithin<br><em>Vasishta</em></h1>
     </div>
-        
-    </body>
+    <div class="hero-right">
+      <p class="hero-desc au au-3">
+        Project Scientist at IISc Bangalore, working at the intersection of <strong>model-based control and learned locomotion</strong>. Building legged robots that move reliably through the real world — across uneven terrain, disturbances, and the gap between simulation and reality.
+      </p>
+      <div class="hero-institutions au au-4">
+        <span class="hero-inst">IIT Bombay</span>
+        <span class="hero-sep"></span>
+        <span class="hero-inst">Mila · Montréal</span>
+        <span class="hero-sep"></span>
+        <span class="hero-inst">CMU Airlabs</span>
+        <span class="hero-sep"></span>
+        <span class="hero-inst">IISc Bangalore</span>
+      </div>
+      <div class="hero-cta au au-4">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-head">
+    <span class="section-num">01 — About</span>
+    <h2>Who I am</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-body reveal">
+      <p>I'm a robotics researcher and engineer at <strong>IISc's Robert Bosch Centre for Cyber Physical Systems</strong>, Bangalore. My work sits at the boundary of model-based control and reinforcement learning — building locomotion systems for legged robots that work when you take them out of simulation.</p>
+      <p>At IISc, I've been the sole technical contributor to developing <strong>convex MPC for bipedal locomotion</strong> for DRDO — achieving stable walking across 45° inclines carrying 10 kg payload. Alongside this, I designed a <strong>hybrid MPC + RL system</strong> at Strider Robotics (ARTPARK) with zero-shot sim-to-real transfer on Go1 and custom quadruped platforms, using a custom QP solver parallelised across 2000+ Isaac Gym environments.</p>
+      <p>Before focusing on robotics, I spent two and a half years at <strong>Mila (Université de Montréal)</strong> on hierarchical planning, lifelong learning, and disentangled representations for RL. Prior to that, I worked on autonomous helicopter trajectory optimisation at <strong>Carnegie Mellon's Airlabs</strong>.</p>
+      <p>I'm interested in roles where physical AI reliability and safety genuinely matter — where the robot needs to work consistently, not just demo convincingly.</p>
+    </div>
+    <div class="skills-panel reveal">
+      <div>
+        <div class="skill-group-title">Control & Planning</div>
+        <div class="tags"><span class="tag">Convex MPC</span><span class="tag">QP Solvers</span><span class="tag">Traj. Optimization</span><span class="tag">Whole-body Control</span><span class="tag">Force/Moment MPC</span></div>
+      </div>
+      <div>
+        <div class="skill-group-title">Learning & Simulation</div>
+        <div class="tags"><span class="tag">Reinforcement Learning</span><span class="tag">Isaac Gym/Lab</span><span class="tag">MuJoCo</span><span class="tag">Domain Randomization</span><span class="tag">Sim-to-Real</span><span class="tag">PyTorch</span></div>
+      </div>
+      <div>
+        <div class="skill-group-title">Systems & Tools</div>
+        <div class="tags"><span class="tag">ROS / ROS2</span><span class="tag">C++ / Python</span><span class="tag">MATLAB</span><span class="tag">Stable-Baselines3</span><span class="tag">MongoDB</span></div>
+      </div>
+      <div>
+        <div class="skill-group-title">Research Areas</div>
+        <div class="tags"><span class="tag">Legged Locomotion</span><span class="tag">Bipedal Robotics</span><span class="tag">Physical AI Safety</span><span class="tag">Lifelong Learning</span><span class="tag">VLAs</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-head">
+    <span class="section-num">02 — Experience</span>
+    <h2>Where I've worked</h2>
+  </div>
+  <div class="exp-list">
+    <div class="exp-item reveal">
+      <div>
+        <div class="exp-period">Apr 2023 – Present</div>
+        <div class="exp-org">Robert Bosch Centre for Cyber Physical Systems<br>IISc Bangalore</div>
+      </div>
+      <div>
+        <div class="exp-role">Project Scientist II</div>
+        <div class="exp-loc">Bengaluru, India</div>
+        <ul class="exp-bullets">
+          <li>Sole technical contributor advancing convex MPC (originally for quadrupeds) to bipedal locomotion — delivering two major DRDO project milestones.</li>
+          <li>Achieved stable locomotion across 45° inclines carrying up to 10 kg payload in simulation.</li>
+          <li>Developed sinusoidal terrain traversal, staircase climbing, and force/moment MPC on bipedal and humanoid platforms.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div>
+        <div class="exp-period">Oct 2023 – Oct 2025</div>
+        <div class="exp-org">Strider Robotics · ARTPARK, IISc</div>
+      </div>
+      <div>
+        <div class="exp-role">Robotics Consultant</div>
+        <div class="exp-loc">Bengaluru, India</div>
+        <ul class="exp-bullets">
+          <li>Designed hybrid Convex MPC + RL system using a custom QP solver parallelised across 2000+ Isaac Gym environments.</li>
+          <li>Achieved zero-shot sim-to-real transfer on Go1 and custom quadruped platforms with robustness to rough terrain and external perturbations.</li>
+          <li>Developed locomotion controllers across both model-based and learning approaches for a custom quadruped platform.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div>
+        <div class="exp-period">Jan 2022 – Jul 2022</div>
+        <div class="exp-org">Dozee — Turtle Shell Technologies</div>
+      </div>
+      <div>
+        <div class="exp-role">Sr. R&D Engineer</div>
+        <div class="exp-loc">Bengaluru, India</div>
+        <ul class="exp-bullets">
+          <li>Built LSTM-based sleep-wake detection achieving 98.6% accuracy from piezoelectric sensor data.</li>
+          <li>Coordinated clinical trials at multiple hospitals including U.S. trials for USFDA approval.</li>
+          <li>Developed ML pipeline for contactless vital signs monitoring including blood pressure estimation.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div>
+        <div class="exp-period">May 2016 – Jul 2016</div>
+        <div class="exp-org">The Airlabs · Carnegie Mellon University</div>
+      </div>
+      <div>
+        <div class="exp-role">Visiting Research Scholar</div>
+        <div class="exp-loc">Pittsburgh, USA · AACUS Project</div>
+        <ul class="exp-bullets">
+          <li>Developed parameter optimisation algorithm for an autonomous helicopter planner to match expert pilot trajectories.</li>
+          <li>Reduced problem from complex Inverse RL to parameter optimisation by identifying roll rate differential as the key parameterisation.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-head">
+    <span class="section-num">03 — Projects</span>
+    <h2>Selected work</h2>
+  </div>
+
+  <div class="project-full reveal">
+    <div class="pf-inner">
+      <div class="pf-media-grid two">
+        <div class="pf-media"><video src="assets/videos/20260309_180105.mp4" autoplay loop muted playsinline></video>
+          <div class="pf-ph"><div class="pf-ph-icon">▶</div><div class="pf-ph-label">Add video — Biped on sinusoidal terrain</div></div></div>
+        <div class="pf-media"><video src="assets/videos/20260309_180215 (online-video-cutter.com).mp4" autoplay loop muted playsinline></video>
+          <div class="pf-ph"><div class="pf-ph-icon">▶</div><div class="pf-ph-label">Add video — 45° slope traversal with payload</div></div></div>
+      </div>
+      <div class="pf-body">
+        <div class="pf-cat">Bipedal Locomotion · MPC · DRDO</div>
+        <div class="pf-title">Biped Walking on Sinusoidal Terrains</div>
+        <p class="pf-desc">Extended convex MPC — originally developed for quadruped platforms — to bipedal locomotion as sole technical contributor on an active DRDO project. Achieves stable walking across sinusoidal terrain profiles and inclines up to 45° while carrying a 10 kg payload in simulation.</p>
+        <ul class="pf-highlights">
+          <li>Adapted quadruped MPC formulation to the under-actuated bipedal morphology</li>
+          <li>45° slope traversal with 10 kg payload demonstrated in simulation</li>
+          <li>Two major DRDO project milestones delivered</li>
+          <li>Multiple biped platform versions with progressive capability improvements</li>
+        </ul>
+        <div class="pf-tags"><span class="ptag">Convex MPC</span><span class="ptag">Bipedal</span><span class="ptag">DRDO</span><span class="ptag">Trajectory Opt.</span><span class="ptag">C++</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-full reveal">
+    <div class="pf-inner">
+      <div class="pf-body">
+        <div class="pf-cat">Quadruped · Hybrid Control · Sim-to-Real</div>
+        <div class="pf-title">MPC + RL Hybrid Locomotion Controller</div>
+        <p class="pf-desc">Hybrid control architecture combining convex MPC trajectory optimisation with learned RL policies. A custom QP solver parallelised across 2000+ Isaac Gym environments enables efficient training. Transfers zero-shot to Go1 and custom quadruped hardware — robust recovery from external kicks, reliable traversal of rough terrain.</p>
+        <ul class="pf-highlights">
+          <li>Custom QP solver parallelised across 2000+ Isaac Gym sim environments</li>
+          <li>Zero-shot sim-to-real transfer on Go1 and custom quadruped platforms</li>
+          <li>Robust to external perturbations via domain randomisation and reward shaping</li>
+          <li>Model-based trajectory optimisation + learned residual policy</li>
+        </ul>
+        <div class="pf-tags"><span class="ptag">MPC + RL</span><span class="ptag">Isaac Gym</span><span class="ptag">Sim-to-Real</span><span class="ptag">Go1</span><span class="ptag">QP Solver</span><span class="ptag">PyTorch</span></div>
+      </div>
+      <div class="pf-media-grid two">
+        <div class="pf-media"><video src="assets/videos/20250301_183936.mp4" autoplay loop muted playsinline></video>
+          <div class="pf-ph"><div class="pf-ph-icon">▶</div><div class="pf-ph-label">Add video — Quadruped kick recovery</div></div></div>
+        <div class="pf-media"><video src="assets/videos/20250417_163554 (online-video-cutter.com).mp4" autoplay loop muted playsinline></video>
+          <div class="pf-ph"><div class="pf-ph-icon">▶</div><div class="pf-ph-label">Add video — Rough terrain traversal</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-full reveal">
+    <div class="pf-inner">
+      <div class="pf-media-grid two">
+        <div class="pf-media"><video src="assets/videos/basic walking no hands.webm" autoplay loop muted playsinline></video>
+          <div class="pf-ph"><div class="pf-ph-icon">▶</div><div class="pf-ph-label">Add video — DRDO humanoid walking with feet</div></div></div>
+        <div class="pf-media"><video src="assets/videos/45 edgree staircase 3.webm" autoplay loop muted playsinline></video>
+          <div class="pf-ph"><div class="pf-ph-icon">▶</div><div class="pf-ph-label">Add video — Staircase climbing</div></div></div>
+      </div>
+      <div class="pf-body">
+        <div class="pf-cat">Humanoid · DRDO · Prioritised Task Space Control</div>
+        <div class="pf-title">DRDO Humanoid — Gait & Stair Climbing</div>
+        <p class="pf-desc">Locomotion controller for the DRDO humanoid platform using a hierarchical whole-body control architecture. LIPM MPC plans footstep locations and CoM trajectory; a prioritised QP-based whole-body controller then solves for task specifications at different priority levels — foot position/orientation, angular momentum, centroidal linear momentum, and default joint angle tracking.</p>
+        <ul class="pf-highlights">
+          <li>LIPM MPC for footstep planning and CoM trajectory generation</li>
+          <li>Prioritised task-space QP solver for whole-body control</li>
+          <li>Stable foot-contact walking gait on flat terrain</li>
+          <li>Staircase climbing across discrete terrain transitions</li>
+          <li>Rough terrain traversal with adaptive gait control</li>
+        </ul>
+        <div class="pf-tags"><span class="ptag">Humanoid</span><span class="ptag">LIPM MPC</span><span class="ptag">Prioritised QP</span><span class="ptag">Whole-body Control</span><span class="ptag">DRDO</span><span class="ptag">Stair Climbing</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-full reveal">
+    <div class="pf-inner">
+      <div class="pf-body">
+        <div class="pf-cat">Bipedal · Design Optimisation · Force/Moment MPC</div>
+        <div class="pf-title">Optimal Design for Legged Robots</div>
+        <p class="pf-desc">Co-design framework that automatically optimises biped morphology with the locomotion controller in the loop. The force/moment MPC controller evaluates candidate designs during optimisation, ensuring that the resulting robot geometry is tuned for dynamic performance rather than designed open-loop.</p>
+        <ul class="pf-highlights">
+          <li>Controller-in-the-loop morphology optimisation for bipedal robots</li>
+          <li>Force/moment MPC used as the evaluation oracle during design search</li>
+          <li>Jointly optimises link lengths, mass distribution, and actuation parameters</li>
+        </ul>
+        <div class="pf-tags"><span class="ptag">Co-design</span><span class="ptag">Force/Moment MPC</span><span class="ptag">Morphology Optimisation</span><span class="ptag">Bipedal</span><span class="ptag">Trajectory Opt.</span></div>
+      </div>
+      <div class="pf-media-grid two">
+        <div class="pf-media"><video src="assets/videos/tron walk 3.webm" autoplay loop muted playsinline></video>
+          <div class="pf-ph"><div class="pf-ph-icon">▶</div><div class="pf-ph-label">Add video — Optimal biped locomotion</div></div></div>
+        <div class="pf-media"><img src="assets/images/compact.png" alt="Design optimisation diagram">
+          <div class="pf-ph"><div class="pf-ph-icon">◈</div><div class="pf-ph-label">Add figure — Morphology optimisation diagram</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-full wide reveal">
+    <div class="pf-inner">
+      <div>
+        <!-- <div class="pf-media"><img src="" alt="CRAFT"> -->
+          <!-- <div class="pf-ph"><div class="pf-ph-icon">◈</div><div class="pf-ph-label">Add figure or diagram — Lifelong Learning from CRAFT framework</div></div> -->
+        <!-- </div> -->
+        <div class="pf-body" style="margin-top:2rem;">
+          <div class="pf-cat">ML Research · Mila · M.S. Thesis</div>
+          <div class="pf-title">Lifelong Learning from CRAFT</div>
+          <p class="pf-desc">M.S. thesis at Mila (Université de Montréal). Hierarchical planning framework using explicit concept representations for complex sequential decision-making. Skill segmentation and concept learning systems continually accumulate and transfer knowledge across tasks — addressing catastrophic forgetting and enabling sample-efficient generalisation.</p>
+          <div class="pf-tags"><span class="ptag">Lifelong Learning</span><span class="ptag">Hierarchical RL</span><span class="ptag">Concept Learning</span><span class="ptag">Sequential Decision-Making</span><span class="ptag">PyTorch</span><span class="ptag">Mila</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-head">
+    <span class="section-num">04 — Education</span>
+    <h2>Academic background</h2>
+  </div>
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <div class="edu-year">2017 – 2020</div>
+      <div class="edu-degree">M.S. in Artificial Intelligence</div>
+      <div class="edu-inst">Mila / Université de Montréal<br>Montreal, Canada</div>
+      <div class="edu-gpa">CGPA: 3.825 / 4.3</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2013 – 2017</div>
+      <div class="edu-degree">B.Tech in Mechanical Engineering</div>
+      <div class="edu-inst">Indian Institute of Technology Bombay<br>Mumbai, India</div>
+      <div class="edu-gpa">CGPA: 8.1 / 10</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">Apr 2023 – Present</div>
+      <div class="edu-degree">Project Scientist II</div>
+      <div class="edu-inst">Robert Bosch Centre for Cyber Physical Systems<br>IISc Bangalore</div>
+      <div class="edu-gpa">Bipedal Locomotion · DRDO · MPC+RL</div>
+    </div>
+  </div>
+  <div class="ach-strip reveal" style="margin-top:1px;">
+    <div class="ach-item"><div class="ach-rank">97</div><div class="ach-label">AIR<br>JEE Main</div></div>
+    <div class="ach-item"><div class="ach-rank">301</div><div class="ach-label">AIR<br>JEE Advanced</div></div>
+    <div class="ach-item"><div class="ach-rank">17</div><div class="ach-label">AIR<br>KVPY</div></div>
+    <div class="ach-item"><div class="ach-rank">0.1%</div><div class="ach-label">Top Percentile<br>HSC Exam</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-head">
+    <span class="section-num">05 — Contact</span>
+    <h2>Get in touch</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <p>Open to research collaborations, industry roles in robotics and physical AI, and conversations at the intersection of reliable autonomous systems and real-world deployment. Based in Bangalore.</p>
+      <form action="https://formspree.io/f/xvzwzrvn" method="POST" id="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+        <button type="submit" class="btn-light">Send Message</button>
+        <p id="form-status" style="margin-top:0.75rem;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;display:none;"></p>
+      </form>
+    </div>
+    <div class="contact-links reveal">
+      <a href="https://github.com/nithin127" class="contact-link" target="_blank">
+        <span class="cl-label">GitHub</span>github.com/nithin127
+      </a>
+      <a href="https://www.linkedin.com/in/nithin-vasishta/" class="contact-link" target="_blank">
+        <span class="cl-label">LinkedIn</span>linkedin.com/in/nithin-vasishta
+      </a>
+      <a href="https://scholar.google.com/citations?user=lUWh3gsAAAAJ&hl=en" class="contact-link" target="_blank">
+        <span class="cl-label">Scholar</span>Google Scholar
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Nithin Venkatesh Vasishta</p>
+  <p>IISc Bangalore · Robotics & AI Research</p>
+</footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button');
+      btn.textContent = 'Sending...'; btn.disabled = true;
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+        if (res.ok) {
+          status.textContent = "Message sent. I'll get back to you shortly.";
+          status.style.color = '#c17d3c'; status.style.display = 'block';
+          form.reset(); btn.textContent = 'Sent ✓';
+        } else { throw new Error(); }
+      } catch {
+        status.textContent = 'Something went wrong. Please try again.';
+        status.style.color = '#e07070'; status.style.display = 'block';
+        btn.textContent = 'Send Message'; btn.disabled = false;
+      }
+    });
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
 </html>
