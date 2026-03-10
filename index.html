@@ -282,7 +282,7 @@
   <div class="about-grid">
     <div class="about-body reveal">
       <p>I'm a robotics researcher and engineer at <strong>IISc's Robert Bosch Centre for Cyber Physical Systems</strong>, Bangalore. My work sits at the boundary of model-based control and reinforcement learning — building locomotion systems for legged robots that work when you take them out of simulation.</p>
-      <p>At IISc, I've been the sole technical contributor to developing <strong>convex MPC for bipedal locomotion</strong> for DRDO — achieving stable walking across 45° inclines carrying 10 kg payload. Alongside this, I designed a <strong>hybrid MPC + RL system</strong> at Strider Robotics (ARTPARK) with zero-shot sim-to-real transfer on Go1 and custom quadruped platforms, using a custom QP solver parallelised across 2000+ Isaac Gym environments.</p>
+      <p>At IISc, I've been the sole technical contributor to developing <strong>convex MPC for bipedal locomotion</strong> for DRDO — achieving stable walking across 45° sinusoidal inclines carrying 10 kg payload. Alongside this, I designed a <strong>hybrid MPC + RL system</strong> at Strider Robotics (ARTPARK) extending Walk These Ways — introducing MPC-derived GRF rewards, Raibert foot placement rewards, and slope-aware MPC formulation, reducing falls by 93% on low-friction surfaces and 87% on steep inclines. Validated on Stoch 5, a custom 70 kg quadruped.</p>
       <p>Before focusing on robotics, I spent two and a half years at <strong>Mila (Université de Montréal)</strong> on hierarchical planning, lifelong learning, and disentangled representations for RL. Prior to that, I worked on autonomous helicopter trajectory optimisation at <strong>Carnegie Mellon's Airlabs</strong>.</p>
       <p>I'm interested in roles where physical AI reliability and safety genuinely matter — where the robot needs to work consistently, not just demo convincingly.</p>
     </div>
@@ -297,7 +297,7 @@
       </div>
       <div>
         <div class="skill-group-title">Systems & Tools</div>
-        <div class="tags"><span class="tag">ROS / ROS2</span><span class="tag">C++ / Python</span><span class="tag">MATLAB</span><span class="tag">Stable-Baselines3</span><span class="tag">MongoDB</span></div>
+        <div class="tags"><span class="tag">ROS / ROS2</span><span class="tag">C++ / Python</span><span class="tag">MATLAB</span><span class="tag">MongoDB</span></div>
       </div>
       <div>
         <div class="skill-group-title">Research Areas</div>
@@ -323,9 +323,9 @@
         <div class="exp-role">Project Scientist II</div>
         <div class="exp-loc">Bengaluru, India</div>
         <ul class="exp-bullets">
-          <li>Sole technical contributor advancing convex MPC (originally for quadrupeds) to bipedal locomotion — delivering two major DRDO project milestones.</li>
-          <li>Achieved stable locomotion across 45° inclines carrying up to 10 kg payload in simulation.</li>
-          <li>Developed sinusoidal terrain traversal, staircase climbing, and force/moment MPC on bipedal and humanoid platforms.</li>
+          <li>Sole technical contributor advancing convex MPC (originally designed for quadrupeds) to bipedal locomotion — achieving stable walking across 45° sinusoidal inclines with 10 kg payload in simulation, delivering two major DRDO milestones.</li>
+          <li>Extended the DRDO humanoid's existing whole-body controller: added probing-based rough terrain walking, improved staircase traversal from single-step (45°) to reliable multi-step climbing at 30° and 45°, and conducted mass and environmental variation experiments — fulfilling two additional DRDO milestones.</li>
+          <li>Developed force/moment MPC controller for a bipedal platform, to be used as the evaluation oracle in an ongoing co-design optimisation framework (morphology optimisation in collaboration with PhD students).</li>
         </ul>
       </div>
     </div>
@@ -338,9 +338,9 @@
         <div class="exp-role">Robotics Consultant</div>
         <div class="exp-loc">Bengaluru, India</div>
         <ul class="exp-bullets">
-          <li>Designed hybrid Convex MPC + RL system using a custom QP solver parallelised across 2000+ Isaac Gym environments.</li>
-          <li>Achieved zero-shot sim-to-real transfer on Go1 and custom quadruped platforms with robustness to rough terrain and external perturbations.</li>
-          <li>Developed locomotion controllers across both model-based and learning approaches for a custom quadruped platform.</li>
+          <li>Designed hybrid Convex MPC + RL locomotion architecture extending Walk These Ways — introduced MPC-derived GRF rewards, Raibert foot placement rewards, and slope-aware MPC formulation; reduced falls by 93% on low-friction surfaces and 87% on steep inclines vs. baseline.</li>
+          <li>Robustness improvements transferred zero-shot to Stoch 5, a custom 70 kg quadruped — one of the heaviest platforms on which this class of controller has been demonstrated in hardware.</li>
+          <li>Separately developed convex MPC controller for slope and flat-ground locomotion on Go1 and Stoch 5, validated on hardware.</li>
         </ul>
       </div>
     </div>
@@ -353,9 +353,7 @@
         <div class="exp-role">Sr. R&D Engineer</div>
         <div class="exp-loc">Bengaluru, India</div>
         <ul class="exp-bullets">
-          <li>Built LSTM-based sleep-wake detection achieving 98.6% accuracy from piezoelectric sensor data.</li>
-          <li>Coordinated clinical trials at multiple hospitals including U.S. trials for USFDA approval.</li>
-          <li>Developed ML pipeline for contactless vital signs monitoring including blood pressure estimation.</li>
+          <li>Worked across product and data science at an early-stage health tech startup — coordinated clinical trials at multiple hospitals including U.S. trials for USFDA approval; contributed to R&D on sleep-wake detection, blood pressure estimation, and thoracic impedance pipeline development.</li>
         </ul>
       </div>
     </div>
@@ -394,12 +392,11 @@
       <div class="pf-body">
         <div class="pf-cat">Bipedal Locomotion · MPC · DRDO</div>
         <div class="pf-title">Biped Walking on Sinusoidal Terrains</div>
-        <p class="pf-desc">Extended convex MPC — originally developed for quadruped platforms — to bipedal locomotion as sole technical contributor on an active DRDO project. Achieves stable walking across sinusoidal terrain profiles and inclines up to 45° while carrying a 10 kg payload in simulation.</p>
+        <p class="pf-desc">Extended convex MPC — originally developed for quadruped platforms — to bipedal locomotion as sole technical contributor on an active DRDO project. Achieves stable walking across 45° sinusoidal inclines while carrying a 10 kg payload in simulation.</p>
         <ul class="pf-highlights">
           <li>Adapted quadruped MPC formulation to the under-actuated bipedal morphology</li>
-          <li>45° slope traversal with 10 kg payload demonstrated in simulation</li>
+          <li>45° sinusoidal incline traversal with 10 kg payload in simulation</li>
           <li>Two major DRDO project milestones delivered</li>
-          <li>Multiple biped platform versions with progressive capability improvements</li>
         </ul>
         <div class="pf-tags"><span class="ptag">Convex MPC</span><span class="ptag">Bipedal</span><span class="ptag">DRDO</span><span class="ptag">Trajectory Opt.</span><span class="ptag">C++</span></div>
       </div>
@@ -411,14 +408,14 @@
       <div class="pf-body">
         <div class="pf-cat">Quadruped · Hybrid Control · Sim-to-Real</div>
         <div class="pf-title">MPC + RL Hybrid Locomotion Controller</div>
-        <p class="pf-desc">Hybrid control architecture combining convex MPC trajectory optimisation with learned RL policies. A custom QP solver parallelised across 2000+ Isaac Gym environments enables efficient training. Transfers zero-shot to Go1 and custom quadruped hardware — robust recovery from external kicks, reliable traversal of rough terrain.</p>
+        <p class="pf-desc">Hybrid locomotion architecture extending Walk These Ways — introduced MPC-derived GRF rewards, Raibert foot placement rewards, and slope-aware MPC formulation. Reduced falls by 93% on low-friction surfaces and 87% on steep inclines vs. baseline. Validated on Stoch 5, a custom 70 kg quadruped, one of the heaviest platforms on which this class of controller has been demonstrated.</p>
         <ul class="pf-highlights">
-          <li>Custom QP solver parallelised across 2000+ Isaac Gym sim environments</li>
-          <li>Zero-shot sim-to-real transfer on Go1 and custom quadruped platforms</li>
-          <li>Robust to external perturbations via domain randomisation and reward shaping</li>
-          <li>Model-based trajectory optimisation + learned residual policy</li>
+          <li>MPC-derived GRF rewards and Raibert foot placement rewards introduced</li>
+          <li>93% fall reduction on low-friction surfaces, 87% on steep inclines vs. baseline</li>
+          <li>Robustness transferred zero-shot to Stoch 5 (70 kg) — sim-to-real by co-contributor</li>
+          <li>Slope-aware MPC formulation for inclined terrain</li>
         </ul>
-        <div class="pf-tags"><span class="ptag">MPC + RL</span><span class="ptag">Isaac Gym</span><span class="ptag">Sim-to-Real</span><span class="ptag">Go1</span><span class="ptag">QP Solver</span><span class="ptag">PyTorch</span></div>
+        <div class="pf-tags"><span class="ptag">MPC + RL</span><span class="ptag">Walk These Ways</span><span class="ptag">Isaac Gym</span><span class="ptag">Stoch 5</span><span class="ptag">GRF Rewards</span><span class="ptag">PyTorch</span></div>
       </div>
       <div class="pf-media-grid two">
         <div class="pf-media"><video src="assets/videos/20250301_183936.mp4" autoplay loop muted playsinline></video>
@@ -440,15 +437,14 @@
       <div class="pf-body">
         <div class="pf-cat">Humanoid · DRDO · Prioritised Task Space Control</div>
         <div class="pf-title">DRDO Humanoid — Gait & Stair Climbing</div>
-        <p class="pf-desc">Locomotion controller for the DRDO humanoid platform using a hierarchical whole-body control architecture. LIPM MPC plans footstep locations and CoM trajectory; a prioritised QP-based whole-body controller then solves for task specifications at different priority levels — foot position/orientation, angular momentum, centroidal linear momentum, and default joint angle tracking.</p>
+        <p class="pf-desc">Extended the DRDO humanoid's existing whole-body controller — built on LIPM MPC for footstep planning and a prioritised task-space QP for whole-body control. Added probing-based rough terrain walking and improved staircase traversal from single-step (45°) to reliable multi-step climbing at 30° and 45°. Conducted mass and environmental variation experiments, fulfilling two additional DRDO milestones.</p>
         <ul class="pf-highlights">
-          <li>LIPM MPC for footstep planning and CoM trajectory generation</li>
-          <li>Prioritised task-space QP solver for whole-body control</li>
-          <li>Stable foot-contact walking gait on flat terrain</li>
-          <li>Staircase climbing across discrete terrain transitions</li>
-          <li>Rough terrain traversal with adaptive gait control</li>
+          <li>Probing-based rough terrain walking added to existing controller</li>
+          <li>Staircase traversal improved from single-step (45°) to multi-step climbing at 30° and 45°</li>
+          <li>Mass and environmental variation experiments conducted</li>
+          <li>Two additional DRDO milestones fulfilled</li>
         </ul>
-        <div class="pf-tags"><span class="ptag">Humanoid</span><span class="ptag">LIPM MPC</span><span class="ptag">Prioritised QP</span><span class="ptag">Whole-body Control</span><span class="ptag">DRDO</span><span class="ptag">Stair Climbing</span></div>
+        <div class="pf-tags"><span class="ptag">Humanoid</span><span class="ptag">LIPM MPC</span><span class="ptag">Whole-body Control</span><span class="ptag">DRDO</span><span class="ptag">Stair Climbing</span><span class="ptag">Rough Terrain</span></div>
       </div>
     </div>
   </div>
@@ -504,7 +500,7 @@
       <div class="edu-year">2017 – 2020</div>
       <div class="edu-degree">M.S. in Artificial Intelligence</div>
       <div class="edu-inst">Mila / Université de Montréal<br>Montreal, Canada</div>
-      <div class="edu-gpa">CGPA: 3.825 / 4.3</div>
+      <div class="edu-gpa">CGPA: 3.35 / 4.3</div>
     </div>
     <div class="edu-card">
       <div class="edu-year">2013 – 2017</div>
